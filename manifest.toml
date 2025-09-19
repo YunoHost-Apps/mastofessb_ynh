@@ -2,7 +2,7 @@
 
 packaging_format = 2
 
-id = "masto-fe-ssb"
+id = "mastofessb"
 name = "Masto-FE (🦥 flavour)"
 description.en = "A fork of IceShrimp's Masto-FE Standalone made to work smoothly and intuitively with a GoToSocial instance as the backend and tweaked with GoToSocial-specific features"
 description.fr = "Un fork de Masto-FE Standalone d'IceShrimp conçu pour fonctionner de manière fluide et intuitive avec une instance GoToSocial comme backend et peaufiné avec des fonctionnalités spécifiques à GoToSocial"
