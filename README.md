@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 A fork of IceShrimp's Masto-FE Standalone made to work smoothly and intuitively with a GoToSocial instance as the backend and tweaked with GoToSocial-specific features
 
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://masto-fe.superseriousbusiness.org/)
-[![Version: 20250714~ynh3](https://img.shields.io/badge/Version-20250714~ynh3-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/mastofessb/)
+[![Version: 20250714~ynh4](https://img.shields.io/badge/Version-20250714~ynh4-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/mastofessb/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/mastofessb"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
