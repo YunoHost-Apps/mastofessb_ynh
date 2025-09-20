@@ -57,11 +57,7 @@ ram.runtime = "300M"
     main.url = "/"
 
     [resources.apt]
-
-        [resources.apt.extras.yarn]
-        repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-        key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-        packages = "yarn"
+    packages = ["yarn"]
 
     [resources.nodejs]
     version = "20"
