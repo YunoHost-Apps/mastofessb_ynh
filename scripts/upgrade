@@ -18,7 +18,6 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
-yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
 ynh_config_add_logrotate
 
 #=================================================
