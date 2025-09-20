@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Masto-FE (🦥 flavour), packaged for YunoHost
 </h1>
 
-A fork of IceShrimp's Masto-FE Standalone made to work smoothly and intuitively with a GoToSocial instance as the backend and tweaked with GoToSocial-specific features
+A fork of IceShrimp's Masto-FE Standalone made to work well with GoToSocial
 
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://masto-fe.superseriousbusiness.org/)
 [![Version: 20250714~ynh4](https://img.shields.io/badge/Version-20250714~ynh4-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/mastofessb/)
