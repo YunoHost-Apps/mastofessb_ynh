@@ -7,7 +7,7 @@ name = "Masto-FE (🦥 flavour)"
 description.en = "Mastodon-like interface for GoToSocial, based on IceShrimp's Masto-FE Standalone"
 description.fr = "Interface à la Mastodon pour GoToSocial, basé sur Masto-FE Standalone d'IceShrimp"
 
-version = "20250714~ynh4"
+version = "20250714~ynh5"
 
 maintainers = ["trendless"]
 
