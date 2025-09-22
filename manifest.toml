@@ -7,7 +7,7 @@ name = "Masto-FE (🦥 flavour)"
 description.en = "Mastodon-like interface for GoToSocial, based on IceShrimp's Masto-FE Standalone"
 description.fr = "Interface à la Mastodon pour GoToSocial, basé sur Masto-FE Standalone d'IceShrimp"
 
-version = "20250714~ynh5"
+version = "2025.07.14~ynh5"
 
 maintainers = ["trendless"]
 
@@ -42,11 +42,10 @@ ram.runtime = "300M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/trendless/ex_ynh/raw/refs/heads/main/ynh-release/masto-fe-standalone-main-110c8fb8cc.tar.gz"
+        url = "https://codeberg.org/superseriousbusiness/masto-fe-standalone/archive/110c8fb8ccb1363f649d3eb30ca822f415145e6a.tar.gz"
         sha256 = "7a68f8d562ecd882af76e46efd902814ae039206cb8cb2535fd7f85364d4365c"
 
-        autoupdate.strategy = "latest_github_release"
-        autoupdate.asset = ".*\\.tar\\.gz"
+        autoupdate.strategy = "latest_forgejo_commit"
 
     [resources.system_user]
 
