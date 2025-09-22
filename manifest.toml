@@ -3,9 +3,9 @@
 packaging_format = 2
 
 id = "mastofessb"
-name = "Masto-FE"
-description.en = "Fork of IceShrimp's Masto-FE Standalone made to work well with GoToSocial"
-description.fr = "Fork de Masto-FE Standalone d'IceShrimp conçu pour fonctionner correctement avec GoToSocial"
+name = "Masto-FE (🦥 flavour)"
+description.en = "Mastodon-like interface for GoToSocial, based on IceShrimp's Masto-FE Standalone"
+description.fr = "Interface à la Mastodon pour GoToSocial, basé sur Masto-FE Standalone d'IceShrimp"
 
 version = "20250714~ynh4"
 
