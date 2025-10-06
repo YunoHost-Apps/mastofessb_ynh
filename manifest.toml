@@ -7,7 +7,7 @@ name = "Masto-FE (🦥 flavour)"
 description.en = "Mastodon-like interface for GoToSocial, based on IceShrimp's Masto-FE Standalone"
 description.fr = "Interface à la Mastodon pour GoToSocial, basé sur Masto-FE Standalone d'IceShrimp"
 
-version = "2025.07.14~ynh5"
+version = "2025.10.05~ynh1"
 
 maintainers = ["trendless"]
 
@@ -42,8 +42,8 @@ ram.runtime = "300M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://codeberg.org/superseriousbusiness/masto-fe-standalone/archive/110c8fb8ccb1363f649d3eb30ca822f415145e6a.tar.gz"
-        sha256 = "7a68f8d562ecd882af76e46efd902814ae039206cb8cb2535fd7f85364d4365c"
+        url = "https://codeberg.org/superseriousbusiness/masto-fe-standalone/archive/d7d013609c86fbb542c907bc0970b4b48f506708.tar.gz"
+        sha256 = "27f0a301cee9826cdf5e38cb6ed405b58e7811cbda325b2651870aa433496227"
 
         autoupdate.strategy = "latest_forgejo_commit"
 
