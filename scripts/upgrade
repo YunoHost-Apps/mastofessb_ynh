@@ -4,7 +4,6 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -13,7 +12,7 @@ source /usr/share/yunohost/helpers
 
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace
+ynh_setup_source --dest_dir="$install_dir" --full_replace=1
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
@@ -24,6 +23,18 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_logrotate
+
+#=================================================
+# BUILD APP
+#=================================================
+
+ynh_script_progression "Building app... This will take some time."
+
+pushd $install_dir
+	ynh_hide_warnings corepack enable && corepack prepare yarn@4.10.3
+	ynh_hide_warnings ynh_exec_as_app yarn
+	ynh_hide_warnings ynh_exec_as_app NODE_ENV=production yarn build
+popd
 
 #=================================================
 # END OF SCRIPT
