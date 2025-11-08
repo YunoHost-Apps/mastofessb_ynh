@@ -11,8 +11,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir/.build" --full_replace=1
+ynh_setup_source --dest_dir="$install_dir" --full_replace=1
 
+mkdir "$install_dir/.build"
+mv $install_dir/* "$install_dir/.build"
 chown -R "$app:$app" "$install_dir/.build"
 
 #=================================================
