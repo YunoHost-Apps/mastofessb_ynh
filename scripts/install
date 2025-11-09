@@ -9,16 +9,16 @@ source /usr/share/yunohost/helpers
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/.build"
+
+chown -R "$app:$app" "$install_dir/.build"
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-
-ynh_script_progression "Adding system configurations related to $app..."
+ynh_script_progression "Adding system configurations..."
 
 ynh_config_add_nginx
 
@@ -27,17 +27,23 @@ ynh_config_add_logrotate
 #=================================================
 # BUILD APP
 #=================================================
+ynh_script_progression "Building $app... This will take some time."
 
-ynh_script_progression "Building app... This will take some time."
-
-pushd $install_dir
+pushd $install_dir/.build
 	ynh_hide_warnings corepack enable && corepack prepare yarn@4.10.3
 	ynh_hide_warnings ynh_exec_as_app yarn
 	ynh_hide_warnings ynh_exec_as_app NODE_ENV=production yarn build
 popd
 
+mv $install_dir/.build/public/* $install_dir/
+ynh_safe_rm "$install_dir/.build"
+ynh_safe_rm "$install_dir/.cache"
+ynh_safe_rm "$install_dir/.yarn"
+chmod -R o-rwx "$install_dir"
+chown -R "$app:www-data" "$install_dir"
+
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression "Installation of $app completed"
+ynh_script_progression "Installation complete."
