@@ -9,16 +9,14 @@ source /usr/share/yunohost/helpers
 #=================================================
 # RESTORE THE APP MAIN DIR
 #=================================================
-
-ynh_script_progression "Restoring the app main directory..."
+ynh_script_progression "Restoring installation directory..."
 
 ynh_restore "$install_dir"
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATION
 #=================================================
-
-ynh_script_progression "Restoring system configurations related to $app..."
+ynh_script_progression "Restoring system configurations..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
@@ -27,14 +25,14 @@ ynh_restore "/etc/logrotate.d/$app"
 #=================================================
 # RESTORE VARIOUS FILES
 #=================================================
+ynh_script_progression "Restoring logs..."
 
 ynh_restore "/var/log/$app/"
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
-
-ynh_script_progression "Reloading NGINX web server..."
+ynh_script_progression "Reloading web server..."
 
 ynh_systemctl --service=nginx --action=reload
 
@@ -42,4 +40,4 @@ ynh_systemctl --service=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression "Restoration completed for $app"
+ynh_script_progression "Restoration complete."
