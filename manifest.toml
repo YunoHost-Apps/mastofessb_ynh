@@ -43,7 +43,7 @@ ram.runtime = "300M"
 
         [resources.sources.main]
         url = "https://codeberg.org/superseriousbusiness/masto-fe-standalone/archive/c6ec86442c973c8e310d53f4418b518facc40850.tar.gz"
-        sha256 = "f6e2f7d62ae54c618271d1a03d0c166966dadbd91dfc293c3344fc5bc3969e8b"
+        sha256 = "afe58d225bf8e884904086e88189bc70a16f5a488b6070b223f28e25e0f29bd9"
 
         autoupdate.strategy = "latest_forgejo_commit"
 
